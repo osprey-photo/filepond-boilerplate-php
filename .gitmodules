@@ -1,3 +1,0 @@
-[submodule "public/api"]
-	path = public/api
-	url = https://github.com/pqina/filepond-server-php.git

@@ -1,0 +1,10 @@
+
+# Run the docker container and ensure that the port is forwarded
+docker run --name mariadbtest3 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=mypass -d mariadb/server:10.3
+
+sudo apt-get install mysql-client
+
+myqsl
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mariadbtest3
+mysql -h 172.17.0.3 -P 3306 --protocol=TCP -u root -p

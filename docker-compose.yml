@@ -1,0 +1,12 @@
+version: '3'
+services:
+  php:
+    image: my-php-app
+    ports:
+      - "8080:80"
+  mariadbtest:
+    image: "mariadb/server:10.3"
+    ports:
+      - 3306:3306
+    environment: 
+      - MYSQL_ROOT_PASSWORD=mypass
